@@ -11,8 +11,8 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Login</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
         <style>
             body{
                 background: white;
@@ -75,7 +75,23 @@
 
     </head>
     <body>
-        <div class="nav"></div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Azienda</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="loginForm.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li class="active" ><a href="loginForm.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div id="formLogin" class="content" >
             <fieldset>
 
@@ -93,12 +109,10 @@
             </fieldset>
         </div>
 
-
-
         <script>
             form = $("#formLogin");
             $(document).ready(function(){
-                form.animate({top: '200px'}, 600);
+                form.animate({top: '35%'}, 600);
             });
 
         </script>
