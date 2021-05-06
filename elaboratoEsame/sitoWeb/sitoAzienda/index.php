@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html lang="en">
     <head>
@@ -20,7 +17,6 @@
         </style>
     </head>
     <body>
-
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -38,7 +34,6 @@
             </div>
         </nav>
 
-
         <div class="content">
             <h1>Azienda</h1>
             <p>
@@ -54,9 +49,6 @@
                 Adipisci, asperiores beatae corporis earum explicabo in labore odit
                 perspiciatis repellendus tempora voluptate.
             </p>
-
         </div>
-
-
     </body>
 </html>
