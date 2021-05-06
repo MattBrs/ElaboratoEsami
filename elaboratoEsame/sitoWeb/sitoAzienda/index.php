@@ -28,7 +28,7 @@
                     <li><a href="#">Servizi</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="loginForm.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="registrationForm.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="loginForm.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
