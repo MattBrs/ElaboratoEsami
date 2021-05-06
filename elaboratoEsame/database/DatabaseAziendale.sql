@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mag 05, 2021 alle 17:17
+-- Creato il: Mag 06, 2021 alle 18:10
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 8.0.3
 
@@ -24,6 +24,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `categoria_prodotto_azienda`
+--
+
+CREATE TABLE `categoria_prodotto_azienda` (
+  `id_categoria` int(255) NOT NULL,
+  `nome_categoria` varchar(100) NOT NULL,
+  `info_categoria` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `prodotti_azienda`
 --
 
@@ -31,7 +43,8 @@ CREATE TABLE `prodotti_azienda` (
   `id_prodotto` int(255) NOT NULL,
   `nome_prodotto` varchar(60) NOT NULL,
   `info_prodotto` varchar(255) NOT NULL,
-  `sede` int(255) NOT NULL
+  `sede` int(255) NOT NULL,
+  `categoria` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -77,6 +90,13 @@ CREATE TABLE `utenti_azienda` (
 --
 
 --
+-- Indici per le tabelle `categoria_prodotto_azienda`
+--
+ALTER TABLE `categoria_prodotto_azienda`
+  ADD PRIMARY KEY (`id_categoria`),
+  ADD UNIQUE KEY `categoria_prodotto_azienda_nome_categoria_uindex` (`nome_categoria`);
+
+--
 -- Indici per le tabelle `prodotti_azienda`
 --
 ALTER TABLE `prodotti_azienda`
@@ -106,6 +126,12 @@ ALTER TABLE `utenti_azienda`
 --
 -- AUTO_INCREMENT per le tabelle scaricate
 --
+
+--
+-- AUTO_INCREMENT per la tabella `categoria_prodotto_azienda`
+--
+ALTER TABLE `categoria_prodotto_azienda`
+  MODIFY `id_categoria` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `prodotti_azienda`
@@ -139,6 +165,7 @@ ALTER TABLE `utenti_azienda`
 -- Limiti per la tabella `prodotti_azienda`
 --
 ALTER TABLE `prodotti_azienda`
+  ADD CONSTRAINT `categoriaProdotto` FOREIGN KEY (`id_prodotto`) REFERENCES `categoria_prodotto_azienda` (`id_categoria`),
   ADD CONSTRAINT `sedeProdotto` FOREIGN KEY (`sede`) REFERENCES `sedi_azienda` (`id_sede`);
 COMMIT;
 
