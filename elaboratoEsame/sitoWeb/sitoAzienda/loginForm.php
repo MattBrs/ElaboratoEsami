@@ -12,62 +12,14 @@
         <title>Login</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <style>
-            body{
-                background: white;
-            }
-            #formLogin{
-                height: 500px;
-                width: 500px;
-                position: absolute;
-                margin-left: auto;
-                margin-right: auto;
-                left: 0;
-                right: 0;
-                top: 300px;
-                text-align: center;
-            }
-            #formLogin label{
-                display: inline-block;
-                width: 150px;
-                margin-bottom: 15px;
-            }
-            #formLogin fieldset{
-                border: 0;
-                border-radius: 10px;
-                background: lightgreen;
-                padding: 30px;
-                position: static;
-            }
-            #formLogin input[type="text"], #formLogin input[type="password"]{
-                border-radius: 5px;
-                border: 0;
-            }
-            #formLogin input[type="submit"]{
-                width: 100px;
-                margin-left: auto;
-                margin-right: auto;
-                border: 0;
-                border-radius: 5px;
-            }
-            #formLogin img{
-                width: 30%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 10px;
-            }
-            #formLogin input[type="text"]:hover, #formLogin input[type="password"]:hover, #formLogin input[type="submit"]:hover{
-                background: lightgrey;
-                border: 1px solid darkgrey;
-            }
-        </style>
+        <link rel="stylesheet" href="styles/loginForm.css">
 
     </head>
     <body>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">Azienda</a>
+                    <a class="navbar-brand" href="index.php">Vetrieria Giavenale</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
