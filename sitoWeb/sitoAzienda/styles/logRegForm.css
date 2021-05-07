@@ -1,0 +1,79 @@
+body{
+    background: white;
+}
+#formLogin{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 33%;
+    text-align: center;
+}
+
+#formReg{
+    height: 900px;
+    width: 600px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 33%;
+    text-align: center;
+}
+
+#formLogin label{
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+#formReg label{
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+#formLogin fieldset, #formReg fieldset{
+    border: 0;
+    border-radius: 10px;
+    background: lightgreen;
+    padding: 30px;
+    position: static;
+}
+#formLogin input[type="text"], #formLogin input[type="password"], #formReg input[type="text"], #formReg input[type="password"], #formReg select {
+    border-radius: 5px;
+    border: 0;
+    width: 200px;
+}
+#formLogin input[type="submit"], #formReg input[type="submit"]{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    border-radius: 5px;
+}
+#formLogin img{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+#formLogin input[type="text"]:hover, #formLogin input[type="password"]:hover, #formLogin input[type="submit"]:hover, #formReg select:hover {
+    background: lightgrey;
+    border: 1px solid darkgrey;
+}
+
+#formReg input[type="text"]:hover, #formReg input[type="password"]:hover, #formReg input[type="submit"]:hover{
+    background: lightgrey;
+    border: 1px solid darkgrey;
+}
+
+#formReg select{
+    background: white;
+}
+
+
