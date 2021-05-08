@@ -34,7 +34,7 @@
 
         <div id="formReg" class="content">
             <fieldset>
-                <form action="" method="post">
+                <form action="registrazione.php" method="post">
                     <label for="nomeTxt">Nome utente:</label>
                     <input type="text" name="nomeTxt" id="nomeTxt" placeholder="MarioRossi"><br>
 

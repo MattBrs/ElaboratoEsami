@@ -38,7 +38,7 @@
 
                 <img src="loginImage.png" alt="">
                 
-                <form action="" method="post">
+                <form action="login.php" method="post">
                     <label for="nomeTxt">Nome utente:</label>
                     <input type="text" name="nomeTxt" id="nomeTxt" placeholder="MarioRossi">
                     <br>
@@ -53,7 +53,7 @@
         <script>
             form = $("#formLogin");
             $(document).ready(function(){
-                form.animate({top: '35%'}, 600);
+                form.animate({width: '600px'}, 600);
             });
 
         </script>
