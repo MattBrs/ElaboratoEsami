@@ -50,6 +50,7 @@
                 echo "gia' loggato";
                 session_destroy();
                 //header("location: ");
+
             }
         ?>
     </body>
