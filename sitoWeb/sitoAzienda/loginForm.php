@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="styles/logRegForm.css">
-
     </head>
     <body>
         <nav class="navbar navbar-inverse">
@@ -24,7 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Prodotti</a></li>
-                    <li><a href="#">Servizi</a></li>
+                    <li><a href="serviziAzienda.php">Servizi</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="registrationForm.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -33,11 +32,18 @@
             </div>
         </nav>
 
+        <?php
+            if($_SESSION['nomeUtente'] != "" ){
+                header("location: paginaPersonale.php");
+                exit();
+            }
+        ?>
+
         <div id="formLogin" class="content" >
             <fieldset>
 
                 <img src="loginImage.png" alt="">
-                
+
                 <form action="login.php" method="post">
                     <label for="nomeTxt">Nome utente:</label>
                     <input type="text" name="nomeTxt" id="nomeTxt" placeholder="MarioRossi">
@@ -55,7 +61,6 @@
             $(document).ready(function(){
                 form.animate({width: '600px'}, 600);
             });
-
         </script>
     </body>
 </html>

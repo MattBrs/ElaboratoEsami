@@ -38,7 +38,8 @@
                         if(password_verify($passw, $row['password_utente'])){               //controllo che la password corrisponda
                             $_SESSION['nomeUtente'] = $nomeUtente;
                             echo "<h1>Login effettuato con successo</h1>";
-                            header("location: index.php");
+                            header("location: paginaPersonale.php");
+                            exit();
                         }else{                                                              //se e' diversa avviso l'utente
                             echo "<h1>password errata</h1>";
                         }
@@ -46,8 +47,9 @@
                         echo "<h1>Nome utente errato</h1>";
                     }
                 }
-            }else{                             //altrimenti redireziono all'area personale
-                header("location: index.php");
+            }else{                                      //altrimenti redireziono all'area personale
+                header("location: paginaPersonale.php");
+                exit();
             }
         ?>
     </body>

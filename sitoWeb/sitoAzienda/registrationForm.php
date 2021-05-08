@@ -23,7 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Prodotti</a></li>
-                    <li><a href="#">Servizi</a></li>
+                    <li><a href="serviziAzienda.php">Servizi</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="registrationForm.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
