@@ -18,7 +18,7 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">Vetrieria Giavenale</a>
+                    <a class="navbar-brand" href="index.php">Vetreria Giavenale</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
@@ -36,10 +36,10 @@
             <fieldset>
                 <form action="" method="post">
                     <label for="nomeTxt">Nome utente:</label>
-                    <input type="text" name="nomeTxt" id="nomeTxt"><br>
+                    <input type="text" name="nomeTxt" id="nomeTxt" placeholder="MarioRossi"><br>
 
                     <label for="emailTxt">Email:</label>
-                    <input type="text" name="emailTxt" id="emailTxt"><br>
+                    <input type="text" name="emailTxt" id="emailTxt" placeholder="marioRossi@*.*"><br>
 
                     <label for="posiszioneSl">Citta':</label>
                     <select name="posizioneSl" id="posizioneSl">
@@ -63,7 +63,8 @@
         <script>
             form = $("#formReg");
             $(document).ready(function(){
-                form.animate({top: '35%'}, 600);
+                form.animate({width: '600px'}, 600);
+
             });
 
         </script>

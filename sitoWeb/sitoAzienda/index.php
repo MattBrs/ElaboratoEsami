@@ -8,13 +8,7 @@
         <title>Vetreria Giavenale</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <style>
-            .content{
-                width: 600px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        </style>
+        <link rel="stylesheet" href="styles/pageContent.css">
     </head>
     <body>
         <nav class="navbar navbar-inverse">
@@ -35,7 +29,7 @@
         </nav>
 
         <div class="content">
-            <h1>Azienda</h1>
+            <h1>Vetreria Giavenale</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Consequatur culpa deserunt dolorem, facere illum ipsa, iure laboriosam maiores molestias
@@ -49,6 +43,10 @@
                 Adipisci, asperiores beatae corporis earum explicabo in labore odit
                 perspiciatis repellendus tempora voluptate.
             </p>
+
+            <h3>Cosa facciamo?</h3>
+            <p>Produciamo forme in vetro su misura di ogni tipo. Visita la sezione prodotti per scoprire di piu'</p>
+
         </div>
     </body>
 </html>

@@ -19,7 +19,7 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">Vetrieria Giavenale</a>
+                    <a class="navbar-brand" href="index.php">Vetreria Giavenale</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
@@ -40,7 +40,7 @@
                 
                 <form action="" method="post">
                     <label for="nomeTxt">Nome utente:</label>
-                    <input type="text" name="nomeTxt" id="nomeTxt">
+                    <input type="text" name="nomeTxt" id="nomeTxt" placeholder="MarioRossi">
                     <br>
                     <label for="passwordTxt">Password:</label>
                     <input type="password" name="passwordTxt" id="passwordTxt">
