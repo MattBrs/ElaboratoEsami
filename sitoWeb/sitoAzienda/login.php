@@ -38,7 +38,7 @@
                         if(password_verify($passw, $row['password_utente'])){               //controllo che la password corrisponda
                             $_SESSION['nomeUtente'] = $nomeUtente;
                             echo "<h1>Login effettuato con successo</h1>";
-                            echo "<a href='#'>Clicca qui per andare nell'area personale</a>";
+                            header("location: index.php");
                         }else{                                                              //se e' diversa avviso l'utente
                             echo "<h1>password errata</h1>";
                         }
@@ -47,11 +47,9 @@
                     }
                 }
             }else{                             //altrimenti redireziono all'area personale
-                echo "gia' loggato";
-                session_destroy();
-                //header("location: ");
-
+                header("location: index.php");
             }
         ?>
     </body>
 </html>
+s
