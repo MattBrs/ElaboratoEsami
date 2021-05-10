@@ -7,7 +7,6 @@
     $db_name = "DatabaseAziendale";
 ?>
 
-
 <!doctype html>
 <html lang="en">
     <head>
