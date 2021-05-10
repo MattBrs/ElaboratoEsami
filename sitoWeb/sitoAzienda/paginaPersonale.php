@@ -42,7 +42,10 @@
             if($nomeUtente != ""){
                 $conn = new mysqli($servername, $username, $password, $db_name);        //connessione database
                 $query = "select nome_utente, email_utente, abitazione_utente from DatabaseAziendale.utenti_azienda where nome_utente='" . $nomeUtente . "'";      //prendo le informazioni dell'utente dal DB
-                $result = $conn->query($query);             //eseguo la query
+
+                $statement = $conn->prepare($query);
+                $statement->execute();
+                $result = $statement->get_result();           //eseguo la query
                 if($result->num_rows > 0){                  //se contiene qualcosa proseguo
                     $row = $result->fetch_assoc();          //metto il risultato su row
                     echo "<h1>Informazioni personali</h1>";

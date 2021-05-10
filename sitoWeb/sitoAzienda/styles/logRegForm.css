@@ -44,7 +44,7 @@ body{
     padding: 30px;
     position: static;
 }
-#formLogin input[type="text"], #formLogin input[type="password"], #formReg input[type="text"], #formReg input[type="password"], #formReg select {
+#formLogin input[type="text"], #formLogin input[type="password"], #formReg input[type="text"], #formReg input[type="password"], #formReg input[type="email"],#formReg select {
     border-radius: 5px;
     border: 0;
     width: 200px;
@@ -62,12 +62,12 @@ body{
     margin-right: auto;
     margin-bottom: 10px;
 }
-#formLogin input[type="text"]:hover, #formLogin input[type="password"]:hover, #formLogin input[type="submit"]:hover, #formReg select:hover {
+#formLogin input[type="text"]:hover, #formLogin input[type="password"]:hover, #formLogin input[type="submit"]:hover, #formReg input[type="email"]:hover,#formReg select:hover {
     background: lightgrey;
     border: 1px solid darkgrey;
 }
 
-#formReg input[type="text"]:hover, #formReg input[type="password"]:hover, #formReg input[type="submit"]:hover{
+#formReg input[type="text"]:hover, #formReg input[type="password"]:hover, #formReg input[type="submit"]:hover, #formReg input[type="email"]:hover{
     background: lightgrey;
     border: 1px solid darkgrey;
 }

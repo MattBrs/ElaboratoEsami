@@ -41,7 +41,7 @@
                     echo "<h1>Registrazione avvenuta con successo</h1>";
 
                     $_SESSION['nomeUtente'] = $nomeUtente;
-                    echo "<a href='#'>Clicca qui per andare nell'area personale</a>";
+                    echo "<a href='paginaPersonale.php'>Clicca qui per andare nell'area personale</a>";
                 }else{
                     echo "<h1>Nome utente o email utilizzati da un altro utente</h1>";
                     echo "<a href='registrationForm.php'>Clicca qui per riprovare</a>";

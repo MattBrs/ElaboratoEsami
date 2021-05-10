@@ -39,7 +39,7 @@
                     <input type="text" name="nomeTxt" id="nomeTxt" placeholder="MarioRossi"><br>
 
                     <label for="emailTxt">Email:</label>
-                    <input type="text" name="emailTxt" id="emailTxt" placeholder="marioRossi@*.*"><br>
+                    <input type="email" name="emailTxt" id="emailTxt" placeholder="marioRossi@*.*"><br>
 
                     <label for="posiszioneSl">Citta':</label>
                     <select name="posizioneSl" id="posizioneSl">
