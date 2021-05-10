@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mag 06, 2021 alle 18:10
+-- Creato il: Mag 10, 2021 alle 16:13
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 8.0.3
 
@@ -82,8 +82,17 @@ CREATE TABLE `utenti_azienda` (
   `id_utente` int(255) NOT NULL,
   `nome_utente` varchar(255) NOT NULL,
   `email_utente` varchar(100) NOT NULL,
-  `password_utente` varchar(255) NOT NULL
+  `password_utente` varchar(255) NOT NULL,
+  `abitazione_utente` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `utenti_azienda`
+--
+
+INSERT INTO `utenti_azienda` (`id_utente`, `nome_utente`, `email_utente`, `password_utente`, `abitazione_utente`) VALUES
+(1, 'Matteo', 'mbrusarosco@chilesotti.it', '$2y$10$038YCT/kv38Wh5n8d4cAIOkQbUcn0TQBaiEyOk43savx4tWGFt3ee', 'schio'),
+(6, 'Cristian', 'cscapin@chilesotti.it', '$2y$10$KeYKTeg.sKOWyMPojYJy2OQzUbfOK2W0CPGviay6XoAyldnEBztqy', 'schio');
 
 --
 -- Indici per le tabelle scaricate
@@ -155,7 +164,7 @@ ALTER TABLE `servizi_azienda`
 -- AUTO_INCREMENT per la tabella `utenti_azienda`
 --
 ALTER TABLE `utenti_azienda`
-  MODIFY `id_utente` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_utente` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Limiti per le tabelle scaricate
