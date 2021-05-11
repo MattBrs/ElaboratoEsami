@@ -40,7 +40,7 @@ body{
 #formLogin fieldset, #formReg fieldset{
     border: 0;
     border-radius: 10px;
-    background: lightgreen;
+    background: #e2b659;
     padding: 30px;
     position: static;
 }
