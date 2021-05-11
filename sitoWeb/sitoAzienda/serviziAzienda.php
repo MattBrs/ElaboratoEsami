@@ -39,9 +39,9 @@
         </nav>
 
         <div class="content">
-            <h1>I servizi che offriamo:</h1>
             <?php
             if($_SESSION['nomeUtente'] != ""){
+                echo "<h1>I servizi che offriamo:</h1>";
                 $conn = new mysqli($servername, $username, $password, $db_name);
                 $query = "select * from servizi_azienda";
 
