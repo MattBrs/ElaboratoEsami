@@ -20,9 +20,8 @@
         <?php
             if($_SESSION['nomeUtente'] == ""){  //controllo se l'utente non e' gia loggato
                 if(isset($_POST['loginBtn'])){  //controllo se e' stato premuto il bottone
-                    $nomeUtente = $_REQUEST['nomeTxt'];
-                    $passw = $_REQUEST['passwordTxt'];
-
+                    $nomeUtente = $_POST['nomeTxt'];
+                    $passw = $_POST['passwordTxt'];
                     $conn = new mysqli($servername, $username, $password, $db_name);                //connessione database
                     $query = "select * from DatabaseAziendale.utenti_azienda where nome_utente=?";  //query per prendere dati utente
 

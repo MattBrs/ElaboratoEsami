@@ -28,6 +28,16 @@
             if(isset($_REQUEST['regBtn'])){
                 $conn = new mysqli($servername, $username, $password, $db_name);
 
+                if ( !preg_match('/^[a-zA-Z0-9]{3,30}+$/', $nomeUtente) ){
+                    echo "<script>alert('Nome utente non valido'); window.location = 'registrationForm.php';  </script>";
+                }
+
+                if(!filter_var($emailUtente, FILTER_VALIDATE_EMAIL)){
+                    echo "<script>alert('email non valida'); window.location = 'registrationForm.php';  </script>";
+                }
+
+
+
                 $hashedPasswd = password_hash($userPassw, PASSWORD_DEFAULT);
 
                 $query = "insert into DatabaseAziendale.utenti_azienda (nome_utente, email_utente, password_utente, abitazione_utente) VALUES (?,?,?,?)";

@@ -38,24 +38,24 @@
         </nav>
         <div class="content">
             <?php
-            $nomeUtente = $_SESSION['nomeUtente'];
-            if($nomeUtente != ""){
-                $conn = new mysqli($servername, $username, $password, $db_name);        //connessione database
-                $query = "select nome_utente, email_utente, abitazione_utente from DatabaseAziendale.utenti_azienda where nome_utente='" . $nomeUtente . "'";      //prendo le informazioni dell'utente dal DB
+                $nomeUtente = $_SESSION['nomeUtente'];
+                if($nomeUtente != ""){
+                    $conn = new mysqli($servername, $username, $password, $db_name);        //connessione database
+                    $query = "select nome_utente, email_utente, abitazione_utente from DatabaseAziendale.utenti_azienda where nome_utente='" . $nomeUtente . "'";      //prendo le informazioni dell'utente dal DB
 
-                $statement = $conn->prepare($query);
-                $statement->execute();
-                $result = $statement->get_result();           //eseguo la query
-                if($result->num_rows > 0){                  //se contiene qualcosa proseguo
-                    $row = $result->fetch_assoc();          //metto il risultato su row
-                    echo "<h1>Informazioni personali</h1>";
-                    echo "<ul><li>" . $row['nome_utente'] . "</li><li>" . $row['email_utente'] . "</li><li>" . $row['abitazione_utente'] . "</li></ul>";    //mostro le informazioni
-                    echo "<br><a href='logout.php'>Logout</a>";
+                    $statement = $conn->prepare($query);
+                    $statement->execute();
+                    $result = $statement->get_result();           //eseguo la query
+                    if($result->num_rows > 0){                  //se contiene qualcosa proseguo
+                        $row = $result->fetch_assoc();          //metto il risultato su row
+                        echo "<h1>Informazioni personali</h1>";
+                        echo "<ul><li>" . $row['nome_utente'] . "</li><li>" . $row['email_utente'] . "</li><li>" . $row['abitazione_utente'] . "</li></ul>";    //mostro le informazioni
+                        echo "<br><a href='logout.php'>Logout</a>";
+                    }
+                }else{
+                    header("location: loginForm.php");
+                    exit();
                 }
-            }else{
-                header("location: loginForm.php");
-                exit();
-            }
             ?>
         </div>
 
