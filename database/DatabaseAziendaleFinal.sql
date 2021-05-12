@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mag 10, 2021 alle 21:38
+-- Creato il: Mag 12, 2021 alle 18:45
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 8.0.3
 
@@ -160,7 +160,8 @@ ALTER TABLE `categoria_prodotto_azienda`
 --
 ALTER TABLE `prodotti_azienda`
   ADD PRIMARY KEY (`id_prodotto`),
-  ADD KEY `prodotti_azienda_sedi_azienda_id_sede_fk` (`sede`);
+  ADD KEY `prodotti_azienda_sedi_azienda_id_sede_fk` (`sede`),
+  ADD KEY `prodotti_azienda_categoria_prodotto_azienda_id_categoria_fk` (`categoria`);
 
 --
 -- Indici per le tabelle `sedi_azienda`
@@ -224,7 +225,7 @@ ALTER TABLE `utenti_azienda`
 -- Limiti per la tabella `prodotti_azienda`
 --
 ALTER TABLE `prodotti_azienda`
-  ADD CONSTRAINT `prodotti_azienda_sedi_azienda_id_sede_fk` FOREIGN KEY (`sede`) REFERENCES `sedi_azienda` (`id_sede`),
+  ADD CONSTRAINT `prodotti_azienda_categoria_prodotto_azienda_id_categoria_fk` FOREIGN KEY (`categoria`) REFERENCES `categoria_prodotto_azienda` (`id_categoria`),
   ADD CONSTRAINT `sedeProdotto` FOREIGN KEY (`sede`) REFERENCES `sedi_azienda` (`id_sede`);
 COMMIT;
 
