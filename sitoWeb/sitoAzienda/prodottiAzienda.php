@@ -36,6 +36,29 @@
             </div>
         </nav>
 
+        <div class="content">
+            <?php
+            echo "<h1>Prodotti:</h1>";
+            $conn = new mysqli($servername, $username, $password, $db_name);
+//            $query = "select nome_prodotto, info_prodotto, nome_categoria, nome_sede from prodotti_azienda
+//                                join categoria_prodotto_azienda cpa on cpa.id_categoria = prodotti_azienda.categoria
+//                                join sedi_azienda sa on prodotti_azienda.sede = sa.id_sede;";
+
+            $query = "select nome_categoria from categoria_prodotto_azienda;";
+
+            $statement = $conn->prepare($query);
+            $statement->execute();
+            $result = $statement->get_result();
+
+            while($row = $result->fetch_assoc()){
+                //echo $row['nome_prodotto'] . " " . $row['info_prodotto'] . " " . $row['nome_categoria'] . " " . $row['nome_sede'] . "<br>";
+                echo "<h3><a href='#'>" . $row['nome_categoria'] . "</a></h3>";
+            }
+
+
+            ?>
+        </div>
+
 
 
     </body>
