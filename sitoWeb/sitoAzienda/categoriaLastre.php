@@ -1,11 +1,10 @@
 <?php
-    session_start();
+session_start();
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $db_name = "DatabaseAziendale";
-
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "DatabaseAziendale";
 ?>
 
 
@@ -16,7 +15,7 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bottiglie</title>
+        <title>Lastre</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="styles/pageContent.css">
@@ -34,12 +33,12 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php
-                        if($_SESSION['nomeUtente'] == ""){
-                            echo "<li><a href='registrationForm.php'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>";
-                            echo "<li><a href='loginForm.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
-                        }else{
-                            echo "<li><a href='loginForm.php'><span class='glyphicon glyphicon-log-in'></span>" . $_SESSION['nomeUtente'] .  "</a></li>";
-                        }
+                    if($_SESSION['nomeUtente'] == ""){
+                        echo "<li><a href='registrationForm.php'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>";
+                        echo "<li><a href='loginForm.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
+                    }else{
+                        echo "<li><a href='loginForm.php'><span class='glyphicon glyphicon-log-in'></span>" . $_SESSION['nomeUtente'] .  "</a></li>";
+                    }
                     ?>
                 </ul>
             </div>
@@ -47,14 +46,13 @@
 
         <div class="content">
             <?php
-            echo "<h1>Bottiglie</h1>";
+                echo "<h1>Lastre</h1>";
                 $conn = new mysqli($servername, $username, $password, $db_name);
 
                 $query = "select nome_prodotto, info_prodotto, nome_sede from prodotti_azienda
-                            join categoria_prodotto_azienda cpa on cpa.id_categoria = prodotti_azienda.categoria
-                            join sedi_azienda sa on sa.id_sede = prodotti_azienda.sede
-                            where nome_categoria='Bottiglie' group by nome_prodotto;";
-
+                                            join categoria_prodotto_azienda cpa on cpa.id_categoria = prodotti_azienda.categoria
+                                            join sedi_azienda sa on sa.id_sede = prodotti_azienda.sede
+                                            where nome_categoria='Lastre' group by nome_prodotto;";
                 $statement = $conn->prepare($query);
                 $statement->execute();
                 $result = $statement->get_result();
@@ -66,9 +64,5 @@
                 $conn->close();
             ?>
         </div>
-
     </body>
 </html>
-
-
-
