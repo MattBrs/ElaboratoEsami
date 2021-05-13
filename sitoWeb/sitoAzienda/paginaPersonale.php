@@ -28,7 +28,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Prodotti</a></li>
+                    <li><a href="prodottiAzienda.php">Prodotti</a></li>
                     <li><a href="serviziAzienda.php">Servizi</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
