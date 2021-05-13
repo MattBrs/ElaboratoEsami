@@ -20,7 +20,6 @@
         <link rel="stylesheet" href="styles/logRegForm.css">
     </head>
     <body>
-
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -41,7 +40,7 @@
                 $nomeUtente = $_SESSION['nomeUtente'];
                 if($nomeUtente != ""){
                     $conn = new mysqli($servername, $username, $password, $db_name);        //connessione database
-                    $query = "select nome_utente, email_utente, abitazione_utente from DatabaseAziendale.utenti_azienda where nome_utente='" . $nomeUtente . "'";      //prendo le informazioni dell'utente dal DB
+                    $query = "select nome_utente, email_utente, abitazione_utente from utenti_azienda where nome_utente='" . $nomeUtente . "'";      //prendo le informazioni dell'utente dal DB
 
                     $statement = $conn->prepare($query);
                     $statement->execute();
@@ -59,6 +58,5 @@
                 }
             ?>
         </div>
-
     </body>
 </html>
