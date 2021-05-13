@@ -1,12 +1,11 @@
 <?php
-session_start();
+    session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db_name = "DatabaseAziendale";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $db_name = "DatabaseAziendale";
 ?>
-
 
 <!doctype html>
 <html lang="en">
