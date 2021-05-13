@@ -52,6 +52,7 @@
                         echo "<ul><li>" . $row['nome_utente'] . "</li><li>" . $row['email_utente'] . "</li><li>" . $row['abitazione_utente'] . "</li></ul>";    //mostro le informazioni
                         echo "<br><a href='logout.php'>Logout</a>";
                     }
+                    $conn->close();
                 }else{
                     header("location: loginForm.php");
                     exit();

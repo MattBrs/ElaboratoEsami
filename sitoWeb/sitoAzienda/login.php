@@ -45,6 +45,7 @@
                     }else{                                                                  //se ci sono 0 righe non ha trovato l'utente
                         echo "<h1>Nome utente errato</h1>";
                     }
+                    $conn->close();
                 }
             }else{                                      //altrimenti redireziono all'area personale
                 header("location: paginaPersonale.php");

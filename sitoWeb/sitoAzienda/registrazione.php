@@ -56,6 +56,7 @@
                     echo "<h1>Nome utente o email utilizzati da un altro utente</h1>";
                     echo "<a href='registrationForm.php'>Clicca qui per riprovare</a>";
                 }
+                $conn->close();
             }
         ?>
     </body>
