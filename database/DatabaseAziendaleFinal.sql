@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mag 12, 2021 alle 18:45
+-- Creato il: Mag 13, 2021 alle 11:32
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 8.0.3
 
@@ -38,9 +38,9 @@ CREATE TABLE `categoria_prodotto_azienda` (
 --
 
 INSERT INTO `categoria_prodotto_azienda` (`id_categoria`, `nome_categoria`, `info_categoria`) VALUES
-(1, 'bottiglie', 'Tutti i prodotti a forma allungata adatti a contenere liquidi.'),
-(2, 'barattoli', 'Tutti i prodotti a forma schiacciata adatti a contenere liquidi.'),
-(3, 'lastre', 'Tutti i prodotti a forma sottile.');
+(1, 'Bottiglie', 'Tutti i prodotti a forma allungata adatti a contenere liquidi.'),
+(2, 'Barattoli', 'Tutti i prodotti a forma schiacciata adatti a contenere liquidi.'),
+(3, 'Lastre', 'Tutti i prodotti a forma sottile.');
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,7 @@ INSERT INTO `prodotti_azienda` (`id_prodotto`, `nome_prodotto`, `info_prodotto`,
 (4, 'birra_10dl', 'Bottiglia per birra da litro', 1, 1),
 (5, 'vino_10dl', 'Bottiglia per vino', 1, 1),
 (6, 'aceto_05dl', 'Bottiglia per aceto', 3, 1),
-(7, 'olio_10dl', 'Bottilia per olio', 1, 1),
+(7, 'olio_10dl', 'Bottiglia per olio', 1, 1),
 (14, 'olio_10dl', 'Bottiglia per olio', 2, 1),
 (15, 'birra_10dl', 'Bottiglia per birra da litro', 2, 1),
 (16, 'aceto_05dl', 'Bottiglia per aceto da mezzo litro', 1, 1),
