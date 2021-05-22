@@ -16,7 +16,7 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Registrazione</title>
     </head>
     <body>
         <?php
@@ -40,7 +40,7 @@
 
                 $hashedPasswd = password_hash($userPassw, PASSWORD_DEFAULT);
 
-                $query = "insert into DatabaseAziendale.utenti_azienda (nome_utente, email_utente, password_utente, abitazione_utente) VALUES (?,?,?,?)";
+                $query = "insert into utenti_azienda (nome_utente, email_utente, password_utente, abitazione_utente) VALUES (?,?,?,?)";
 
                 $statement = $conn->prepare($query);
                 $statement->bind_param("ssss",$nomeUtente,$emailUtente, $hashedPasswd, $posizioneUtente);

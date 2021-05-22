@@ -22,16 +22,16 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href="prodottiAzienda.php">Prodotti</a></li>
-                    <li><a href="serviziAzienda.php">Servizi</a></li>
+                    <li><a href="prodotti/prodottiAzienda.php">Prodotti</a></li>
+                    <li><a href="servizi/serviziAzienda.php">Servizi</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php
                         if($_SESSION['nomeUtente'] == ""){
-                            echo "<li><a href='registrationForm.php'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>";
-                            echo "<li><a href='loginForm.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
+                            echo "<li><a href='login/registrationForm.php'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>";
+                            echo "<li><a href='login/loginForm.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
                         }else{
-                            echo "<li><a href='loginForm.php'><span class='glyphicon glyphicon-log-in'></span>" . $_SESSION['nomeUtente'] .  "</a></li>";
+                            echo "<li><a href='login/loginForm.php'><span class='glyphicon glyphicon-log-in'></span>" . $_SESSION['nomeUtente'] .  "</a></li>";
                         }
                     ?>
                 </ul>

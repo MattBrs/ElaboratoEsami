@@ -12,18 +12,18 @@
         <title>Registrazione</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="styles/logRegForm.css">
+        <link rel="stylesheet" href="../styles/logRegForm.css">
     </head>
     <body>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">Vetreria Giavenale</a>
+                    <a class="navbar-brand" href="../index.php">Vetreria Giavenale</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="prodottiAzienda.php">Prodotti</a></li>
-                    <li><a href="serviziAzienda.php">Servizi</a></li>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="../prodotti/prodottiAzienda.php">Prodotti</a></li>
+                    <li><a href="../servizi/serviziAzienda.php">Servizi</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="registrationForm.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

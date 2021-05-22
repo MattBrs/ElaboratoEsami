@@ -23,7 +23,7 @@
                     $nomeUtente = $_POST['nomeTxt'];
                     $passw = $_POST['passwordTxt'];
                     $conn = new mysqli($servername, $username, $password, $db_name);                //connessione database
-                    $query = "select * from DatabaseAziendale.utenti_azienda where nome_utente=?";  //query per prendere dati utente
+                    $query = "select * from utenti_azienda where nome_utente=?";  //query per prendere dati utente
 
                     $statement = $conn->prepare($query);                                    //faccio prepare della query (sqlinjection)
                     $statement->bind_param("s", $nomeUtente);                   //bind_param con quello che devo inserire
@@ -41,9 +41,11 @@
                             exit();
                         }else{                                                              //se e' diversa avviso l'utente
                             echo "<h1>password errata</h1>";
+                            echo "<p><a href='loginForm.php'>Clicca qui per riprovare</a></p>";
                         }
                     }else{                                                                  //se ci sono 0 righe non ha trovato l'utente
                         echo "<h1>Nome utente errato</h1>";
+                        echo "<p><a href='loginForm.php'>Clicca qui per riprovare</a></p>";
                     }
                     $conn->close();
                 }
