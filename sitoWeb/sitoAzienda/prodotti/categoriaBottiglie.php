@@ -51,7 +51,7 @@
             echo "<h1>Bottiglie</h1>";
                 $conn = new mysqli($servername, $username, $password, $db_name);
 
-                $query = "select nome_prodotto, info_prodotto, nome_sede from prodotti_azienda
+                $query = "select nome_prodotto, info_prodotto, nome_sede, costo_prodotto from prodotti_azienda
                             join categoria_prodotto_azienda cpa on cpa.id_categoria = prodotti_azienda.categoria
                             join sedi_azienda sa on sa.id_sede = prodotti_azienda.sede
                             where nome_categoria='Bottiglie' group by nome_prodotto, nome_sede";
@@ -67,6 +67,7 @@
                     }else{
                         echo "</p>";
                         echo "<h3>" . $row['nome_prodotto'] . "</h3><p>" . $row['info_prodotto'] . "</p>";
+                        echo "<p> Costo: <b>". $row['costo_prodotto'] ."€</b></p>";
                         echo "<p><b>Disponibile presso:</b> " . $row['nome_sede'];
 
                     }
