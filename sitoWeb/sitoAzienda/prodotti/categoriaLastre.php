@@ -53,14 +53,22 @@
                 $query = "select nome_prodotto, info_prodotto, nome_sede from prodotti_azienda
                                             join categoria_prodotto_azienda cpa on cpa.id_categoria = prodotti_azienda.categoria
                                             join sedi_azienda sa on sa.id_sede = prodotti_azienda.sede
-                                            where nome_categoria='Lastre' group by nome_prodotto;";
+                                            where nome_categoria='Lastre' group by nome_prodotto, nome_sede;";
                 $statement = $conn->prepare($query);
                 $statement->execute();
                 $result = $statement->get_result();
 
+                $tmp = ""; //variabile d'appoggio che utilizzo per i prodotti della stessa sede
                 while($row = $result->fetch_assoc()){
-                    echo "<h3>" . $row['nome_prodotto'] . "</h3><p>" . $row['info_prodotto'] . "</p>";
-                    echo "<p><b>Disponibile presso:</b> " . $row['nome_sede'] . "</p>";
+                    if($row['nome_prodotto'] == $tmp){
+                        echo " ," . $row['nome_sede'];
+                    }else{
+                        echo "</p>";
+                        echo "<h3>" . $row['nome_prodotto'] . "</h3><p>" . $row['info_prodotto'] . "</p>";
+                        echo "<p><b>Disponibile presso:</b> " . $row['nome_sede'];
+
+                    }
+                    $tmp = $row['nome_prodotto'];
                 }
                 $conn->close();
             ?>
