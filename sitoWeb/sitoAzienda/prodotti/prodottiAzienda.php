@@ -49,16 +49,16 @@
                 echo "<h1>Prodotti:</h1>";
                 $conn = new mysqli($servername, $username, $password, $db_name);
 
-                $query = "select nome_categoria from categoria_prodotto_azienda;";
+                $query = "select nome_categoria, info_categoria from categoria_prodotto_azienda;";
 
                 $statement = $conn->prepare($query);
                 $statement->execute();
                 $result = $statement->get_result();
-                echo "<div class='links'>";
+
                 while($row = $result->fetch_assoc()){
-                    echo "<h3><a href='categoria" . $row['nome_categoria'] . ".php'>" . $row['nome_categoria'] . "</a></h3>";
+                    echo "<a><h3 href='categoria" . $row['nome_categoria'] . ".php'>" . $row['nome_categoria'] . "</h3></a>";
+                    echo "<p>" . $row['info_categoria'] . "</p>";
                 }
-                echo "</div>";
                 $conn->close();
             ?>
         </div>
