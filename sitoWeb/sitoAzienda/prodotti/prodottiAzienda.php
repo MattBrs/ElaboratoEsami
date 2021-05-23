@@ -56,8 +56,10 @@
                 $result = $statement->get_result();
 
                 while($row = $result->fetch_assoc()){
-                    echo "<a><h3 href='categoria" . $row['nome_categoria'] . ".php'>" . $row['nome_categoria'] . "</h3></a>";
+                    //echo "<h3><a href='categoria" . $row['nome_categoria'] . ".php'>" . $row['nome_categoria'] . "</a></h3>";
+                    echo "<a href='categoria" .  $row['nome_categoria']  . ".php'>  <h3>" . $row['nome_categoria'] . "</h3></a>";
                     echo "<p>" . $row['info_categoria'] . "</p>";
+
                 }
                 $conn->close();
             ?>
