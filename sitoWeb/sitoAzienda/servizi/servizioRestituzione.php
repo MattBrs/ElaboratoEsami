@@ -47,7 +47,7 @@
                     <h1>Servizio di restituzione</h1>
                     <p>Il nostro personale dedicato all'assistenza di contattera' per le metodologie della riconsegna e rimborso.</p>
                     <p>Puoi portare il prodotto acquistato direttamente in sede oppure farlo venire a prendere entro 5 giorni da un nostro corriere affiliato.</p>
-                    <input type='hidden' name='requestType' value='restituzione'>
+                    <input type='hidden' name='requestType' value='Restituzione'>
                     <input type='submit' value='Clicca qui per inviare la richiesta' >
                     </form>
                     </div>";

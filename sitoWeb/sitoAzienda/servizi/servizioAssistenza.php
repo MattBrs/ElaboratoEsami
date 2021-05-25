@@ -1,6 +1,5 @@
 <?php
     session_start();
-
 ?>
 
 <!doctype html>
@@ -48,14 +47,11 @@
                         <form action='resolveRequest.php' method='post'>
                         <h1>Servizio di assistenza utente</h1>
                         <p>Il nostro personale dedicato all' assistenza utente provvedera' a contattarti tramite email per rispondere a qualsiasi domanda</p>
-                        <input type='hidden' name='requestType' value='assistenza'>
+                        <input type='hidden' name='requestType' value='Assistenza'>
                         <input type='submit' value='Clicca qui per inviare la richiesta' >
                         </form>
                         </div>";
             }
         ?>
-
-
-
     </body>
 </html>
