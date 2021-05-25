@@ -47,42 +47,59 @@
 
         <div class="content">
             <?php
-                if($_SESSION['nomeUtente'] != ""){
+                if(isset($_SESSION['nomeUtente'])){
                     //variabili di appoggio e inserimento nel DB
+                    $nomeUtente = $_SESSION['nomeUtente'];
                     $servizio = $_POST['requestType'];
                     $id_servizio = -1;
                     $id_utente = -1;
+                    $id_sede = -1;
 
                     $conn = new mysqli($servername, $username, $password, $db_name);    //connessione database
-
                     $query = "select id_servizio from DatabaseAziendale.servizi_azienda where nome_servizio=?"; //query per ottenere id servizio
-
                     //prendo id servzio
                     $stmt = $conn->prepare($query);
                     $stmt->bind_param("s", $servizio);
                     $stmt->execute();
-                    if($stmt->num_rows() > 0){
-                        $ris = $stmt->get_result()->fetch_assoc();
-                        $id_servizio = $ris['id_servizio'];
+                    $ris = $stmt->get_result();
+                    if($ris->num_rows > 0){
+                        $row = $ris->fetch_assoc();
+                        $id_servizio = $row['id_servizio'];
                     }
 
-                    $query = "select id_utente from DatabaseAziendale.utenti_azienda where nome_utente=?";  //query per ottenere id utente
+                    $query2 = "select id_utente from DatabaseAziendale.utenti_azienda where nome_utente=?";  //query per ottenere id utente
 
                     //prendo id utente
-                    $stmt = $conn->prepare($query);
-                    $stmt->bind_param("s", $_SESSION['nomeUtente']);
+
+                    $stmt = $conn->prepare($query2);
+                    $stmt->bind_param("s", $nomeUtente);
                     $stmt->execute();
-                    if($stmt->num_rows() > 0){
-                        $ris = $stmt->get_result()->fetch_assoc();
-                        $id_utente = $ris['id_utente'];
+                    $ris = $stmt->get_result();
+                    if($ris->num_rows > 0){
+                        $row = $ris->fetch_assoc();
+                        $id_utente = $row['id_utente'];
                     }
 
+                    $query = "select id_sede from DatabaseAziendale.sedi_azienda where posizione_sede=?";  //query per ottenere id sede
+                    $sede = $_POST['posizioneSl'];
+                    //prendo id sede
+                    $stmt = $conn->prepare($query);
+                    $stmt->bind_param("s", $sede);
+                    $stmt->execute();
+                    $ris = $stmt->get_result();
+
+                    if($ris->num_rows > 0){
+                        $row = $ris->fetch_assoc();
+                        $id_sede = $row['id_sede'];
+                    }
+
+                    echo $id_servizio . " " . $sede . ": " . $id_sede . " " .$id_utente;
                     $query = "insert into DatabaseAziendale.utente_richiede_servizio (utente, servizio, sede) VALUES (?,?,?)";
-                    $stmt = $conn->query($query);
-                    //$stmt->bind_param("s", $_SESSION['nomeUtente']);
+                    $stmt = $conn->prepare($query);
+                    $stmt->bind_param("sss", $id_utente, $id_servizio, $id_sede);
+                    $stmt->execute();
 
-
-
+                    $conn->close();
 
                 } else{
                     echo "<h1>Devi loggarti per visualizzare questa pagina</h1>";

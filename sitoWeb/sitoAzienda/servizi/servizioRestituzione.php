@@ -43,13 +43,20 @@
         <?php
             if($_SESSION['nomeUtente'] != ""){
                 echo "<div class='content'>
-                    <form action='resolveRequest.php' method='post'>
-                    <h1>Servizio di restituzione</h1>
-                    <p>Il nostro personale dedicato all'assistenza di contattera' per le metodologie della riconsegna e rimborso.</p>
-                    <p>Puoi portare il prodotto acquistato direttamente in sede oppure farlo venire a prendere entro 5 giorni da un nostro corriere affiliato.</p>
-                    <input type='hidden' name='requestType' value='Restituzione'>
-                    <input type='submit' value='Clicca qui per inviare la richiesta' >
-                    </form>
+                        <form action='resolveRequest.php' method='post'>
+                            <h1>Servizio di restituzione</h1>
+                            <p>Il nostro personale dedicato all'assistenza di contattera' per le metodologie della riconsegna e rimborso.</p>
+                            <p>Puoi portare il prodotto acquistato direttamente in sede oppure farlo venire a prendere entro 5 giorni da un nostro corriere affiliato.</p>
+                            <input type='hidden' name='requestType' value='Restituzione'>
+                            <label for='posizioneSl'>Citta':</label>
+                            <select name='posizioneSl' id='posizioneSl'>
+                                <option value='Schio'>Schio</option>
+                                <option value='Thiene'>Thiene</option>
+                                <option value='Marano'>Marano</option>
+                                <option value='Vicenza'>Vicenza</option>
+                            </select><br>
+                            <input type='submit' value='Clicca qui per inviare la richiesta' >
+                        </form>
                     </div>";
             }else{
                 echo "<h1>Devi loggarti per vedere questa pagina</h1>";
