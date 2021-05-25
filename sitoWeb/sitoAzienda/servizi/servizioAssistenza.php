@@ -47,13 +47,14 @@
                         <form action='resolveRequest.php' method='post'>
                             <h1>Servizio di assistenza utente</h1>
                             <p>Il nostro personale dedicato all' assistenza utente provvedera' a contattarti tramite email per rispondere a qualsiasi domanda</p>
+                            <p>Seleziona la citta' piu' vicina alla tua posizione:</p>
                             <input type='hidden' name='requestType' value='Assistenza'>
-                            <select name='posizioneSl' id='posizioneSl'>
+                            <select name='posizioneSl' id='posizioneSl' required>
                                 <option value='Schio'>Schio</option>
                                 <option value='Thiene'>Thiene</option>
                                 <option value='Marano'>Marano</option>
                                 <option value='Vicenza'>Vicenza</option>
-                            </select><br>
+                            </select><br><br>
                             <input type='submit' value='Clicca qui per inviare la richiesta' >
                         </form>
                     </div>";

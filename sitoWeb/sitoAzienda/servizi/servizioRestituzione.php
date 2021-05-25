@@ -46,22 +46,22 @@
                         <form action='resolveRequest.php' method='post'>
                             <h1>Servizio di restituzione</h1>
                             <p>Il nostro personale dedicato all'assistenza di contattera' per le metodologie della riconsegna e rimborso.</p>
-                            <p>Puoi portare il prodotto acquistato direttamente in sede oppure farlo venire a prendere entro 5 giorni da un nostro corriere affiliato.</p>
+                            <p>Puoi portare il prodotto acquistato direttamente in sede oppure farlo venire a prendere entro 5 giorni da un nostro corriere affiliato.</p><br>
+                            <p>Seleziona la citta' piu' vicina alla tua posizione:</p>
                             <input type='hidden' name='requestType' value='Restituzione'>
                             <label for='posizioneSl'>Citta':</label>
-                            <select name='posizioneSl' id='posizioneSl'>
+                            <select name='posizioneSl' id='posizioneSl' required>
                                 <option value='Schio'>Schio</option>
                                 <option value='Thiene'>Thiene</option>
                                 <option value='Marano'>Marano</option>
                                 <option value='Vicenza'>Vicenza</option>
-                            </select><br>
-                            <input type='submit' value='Clicca qui per inviare la richiesta' >
+                            </select><br><br>
+                            <input type='submit' value='Clicca qui per inviare la richiesta' id='sendBtn'>
                         </form>
                     </div>";
             }else{
                 echo "<h1>Devi loggarti per vedere questa pagina</h1>";
             }
         ?>
-
     </body>
 </html>
