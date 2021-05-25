@@ -41,7 +41,7 @@
                     <label for="emailTxt">Email:</label>
                     <input type="email" name="emailTxt" id="emailTxt" placeholder="marioRossi@*.*"><br>
 
-                    <label for="posiszioneSl">Citta':</label>
+                    <label for="posizioneSl">Citta':</label>
                     <select name="posizioneSl" id="posizioneSl">
                         <option value="schio">Schio</option>
                         <option value="thiene">Thiene</option>
@@ -64,9 +64,7 @@
             form = $("#formReg");
             $(document).ready(function(){
                 form.animate({width: '600px'}, 600);
-
             });
-
         </script>
     </body>
 </html>

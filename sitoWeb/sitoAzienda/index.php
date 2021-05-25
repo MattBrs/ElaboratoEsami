@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="styles/pageContent.css">
     </head>
     <body>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse" >
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.php">Vetreria Giavenale</a>
