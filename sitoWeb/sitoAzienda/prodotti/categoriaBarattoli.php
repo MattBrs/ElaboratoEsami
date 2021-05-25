@@ -50,9 +50,10 @@
                 echo "<h1>Barattoli</h1>";
                 $conn = new mysqli($servername, $username, $password, $db_name);
 
-                $query = "select nome_prodotto, info_prodotto, nome_sede, costo_prodotto from prodotti_azienda
-                                join categoria_prodotto_azienda cpa on cpa.id_categoria = prodotti_azienda.categoria
-                                join sedi_azienda sa on sa.id_sede = prodotti_azienda.sede
+                $query = "select nome_prodotto, info_prodotto, nome_sede, costo_prodotto from prodotto_risiede 
+                                join prodotti_azienda pa on pa.id_prodotto = prodotto_risiede.prodotto 
+                                join categoria_prodotto_azienda cpa on cpa.id_categoria = pa.categoria
+                                join sedi_azienda sa on sa.id_sede = prodotto_risiede.sede
                                 where nome_categoria='Barattoli' group by nome_prodotto, nome_sede;";
                 $statement = $conn->prepare($query);
                 $statement->execute();
