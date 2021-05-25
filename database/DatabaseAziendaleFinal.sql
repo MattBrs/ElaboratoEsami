@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mag 25, 2021 alle 16:25
+-- Creato il: Mag 25, 2021 alle 21:56
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 8.0.3
 
@@ -148,7 +148,7 @@ CREATE TABLE `servizi_azienda` (
 INSERT INTO `servizi_azienda` (`id_servizio`, `nome_servizio`, `info_servizio`) VALUES
 (1, 'Consegna', 'Consegna nella zona abitativa dell\'utente.'),
 (2, 'Restituzione', 'Invia email per procedura restituione'),
-(3, 'contattaAssistenza', 'Invia email per chattare con assistenza');
+(3, 'Assistenza', 'Invia email per chattare con assistenza');
 
 -- --------------------------------------------------------
 
@@ -162,6 +162,14 @@ CREATE TABLE `utente_richiede_servizio` (
   `servizio` int(255) NOT NULL,
   `sede` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `utente_richiede_servizio`
+--
+
+INSERT INTO `utente_richiede_servizio` (`id_richiesta`, `utente`, `servizio`, `sede`) VALUES
+(9, 1, 2, 2),
+(10, 1, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -281,7 +289,7 @@ ALTER TABLE `servizi_azienda`
 -- AUTO_INCREMENT per la tabella `utente_richiede_servizio`
 --
 ALTER TABLE `utente_richiede_servizio`
-  MODIFY `id_richiesta` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_richiesta` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT per la tabella `utenti_azienda`

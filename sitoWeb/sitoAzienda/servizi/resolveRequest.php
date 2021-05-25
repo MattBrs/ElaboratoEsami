@@ -93,7 +93,6 @@
                         $id_sede = $row['id_sede'];
                     }
 
-                    echo $id_servizio . " " . $sede . ": " . $id_sede . " " .$id_utente;
                     $query = "insert into utente_richiede_servizio (utente, servizio, sede) VALUES (?,?,?)";
                     $stmt = $conn->prepare($query);
                     $stmt->bind_param("sss", $id_utente, $id_servizio, $id_sede);
