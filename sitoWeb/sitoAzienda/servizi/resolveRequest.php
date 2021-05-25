@@ -56,7 +56,7 @@
                     $id_sede = -1;
 
                     $conn = new mysqli($servername, $username, $password, $db_name);    //connessione database
-                    $query = "select id_servizio from DatabaseAziendale.servizi_azienda where nome_servizio=?"; //query per ottenere id servizio
+                    $query = "select id_servizio from servizi_azienda where nome_servizio=?"; //query per ottenere id servizio
                     //prendo id servzio
                     $stmt = $conn->prepare($query);
                     $stmt->bind_param("s", $servizio);
@@ -67,7 +67,7 @@
                         $id_servizio = $row['id_servizio'];
                     }
 
-                    $query2 = "select id_utente from DatabaseAziendale.utenti_azienda where nome_utente=?";  //query per ottenere id utente
+                    $query2 = "select id_utente from utenti_azienda where nome_utente=?";  //query per ottenere id utente
 
                     //prendo id utente
 
@@ -80,7 +80,7 @@
                         $id_utente = $row['id_utente'];
                     }
 
-                    $query = "select id_sede from DatabaseAziendale.sedi_azienda where posizione_sede=?";  //query per ottenere id sede
+                    $query = "select id_sede from sedi_azienda where posizione_sede=?";  //query per ottenere id sede
                     $sede = $_POST['posizioneSl'];
                     //prendo id sede
                     $stmt = $conn->prepare($query);
@@ -94,7 +94,7 @@
                     }
 
                     echo $id_servizio . " " . $sede . ": " . $id_sede . " " .$id_utente;
-                    $query = "insert into DatabaseAziendale.utente_richiede_servizio (utente, servizio, sede) VALUES (?,?,?)";
+                    $query = "insert into utente_richiede_servizio (utente, servizio, sede) VALUES (?,?,?)";
                     $stmt = $conn->prepare($query);
                     $stmt->bind_param("sss", $id_utente, $id_servizio, $id_sede);
                     $stmt->execute();
