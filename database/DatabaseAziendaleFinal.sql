@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mag 26, 2021 alle 18:41
+-- Creato il: Mag 30, 2021 alle 19:32
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 8.0.3
 
@@ -193,8 +193,7 @@ INSERT INTO `utenti_azienda` (`id_utente`, `nome_utente`, `email_utente`, `passw
 (1, 'Matteo', 'mbrusarosco@chilesotti.it', '$2y$10$038YCT/kv38Wh5n8d4cAIOkQbUcn0TQBaiEyOk43savx4tWGFt3ee', 'schio'),
 (6, 'Cristian', 'cscapin@chilesotti.it', '$2y$10$KeYKTeg.sKOWyMPojYJy2OQzUbfOK2W0CPGviay6XoAyldnEBztqy', 'schio'),
 (7, 'testAccount', 'test@test.com', '$2y$10$R7JZeJIQWti8LNvQ8Nrc5uQ4gaGpf5xLomnZzFefDA0CLlq2/gnTq', 'thiene'),
-(8, 'MarioRossi', 'marioRossi@gmail.com', '$2y$10$8TPFGFtQSeYfS7epKvXkmumRqfrsInYfIRVO52DRsJtW1BSAQFgN6', 'schio'),
-(10, 'matteo2', 'kakka.kakka@gmail.com', '$2y$10$xzSSAmL2xhniFA5x8Q4gy.J6bcJ6b4wcVOYf0JlMB6oc9DgdL.BIi', 'schio');
+(8, 'MarioRossi', 'marioRossi@gmail.com', '$2y$10$8TPFGFtQSeYfS7epKvXkmumRqfrsInYfIRVO52DRsJtW1BSAQFgN6', 'schio');
 
 --
 -- Indici per le tabelle scaricate
